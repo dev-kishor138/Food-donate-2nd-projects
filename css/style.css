@@ -87,6 +87,10 @@ section
     height: 100%;
     z-index: 1;
 }
+.slider-section .carousel .carousel-inner .carousel-item img
+{
+    height: 100%;
+}
 .slider-section .carousel .carousel-inner .carousel-item .background-overlay
 {
     position: absolute;
@@ -164,7 +168,7 @@ section
     grid-template-columns: repeat(5, 1fr);
     grid-column-gap: 40px;
 }
-.donate-section .donate-box .box
+.donate-section .donate-box button
 {
     background: #eee;
     height: 150px;
@@ -174,19 +178,15 @@ section
     align-items: center;
     border-radius: 5px;
     margin-bottom: 50px;
+    font-size: 2em;
+    border: none;
 }
-.donate-section .donate-box .box:hover
+.donate-section .donate-box button:hover
 {
     background: #F8C4B4;
     cursor: pointer;
     border: 3px solid tomato;
     color: red;
-}
-.donate-section .donate-box .box
-h3
-{
-    font-size: 2em;
-    font-weight: 600;
 }
 .donate-section .donate-input
 {
@@ -267,11 +267,18 @@ h3
 {
     background: #7978FF;
 }
+.donate-plan-section .my-card-box .my-card i
+{
+    font-size: 50px;
+    color: #fff;
+    margin-bottom: 10px;
+}
 .donate-plan-section .my-card-box .my-card h4
 {
     font-size: 1.7em;
     margin: 10px 0;
     color: #111;
+    margin-bottom: 10px;
 }
 .donate-plan-section .my-card-box .my-card p
 {
@@ -453,4 +460,357 @@ footer h3
 footer p
 {
     font-size: 1.1em;
+}
+
+
+.popup-box
+{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 5px;
+    background: tomato;
+    width: 500px;
+    padding: 40px 0;
+    text-align: center;
+    align-items: center;
+    z-index: 100;
+    display: none;
+}
+.popup-box i
+{
+    font-size: 60px;
+    color: #fff;
+    border: 4px solid #fff;
+    padding: 25px 20px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+.popup-box h4
+{
+    font-size: 2em;
+    margin: 20px 0;
+    font-weight: 600;
+}
+.popup-box button
+{
+    padding: 5px 20px;
+    border-radius: 5px;
+    background: green;
+    font-size: 1.3em;
+    border: none;
+    cursor: pointer;
+    text-transform: capitalize;
+    color: #fff;
+    letter-spacing: 1px;
+    margin-top: 20px;
+}
+
+@media (max-width: 1300px)
+{
+    .donate-plan-section .my-card-box
+    {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-row-gap: 40px;
+    }
+}
+
+
+@media (max-width: 991px)
+{
+    section
+    {
+        margin-bottom: 50px !important;
+    }
+    .navbar-section
+    {
+        width: 100%;
+    }
+    .navbar-section .logo h2
+    {
+        font-size: 15px;
+    }
+    .navbar-section nav ul
+    {
+        position: fixed;
+        top: 69px;
+        left: -100%;
+        display: block;
+        padding: 100px 50px;
+        text-align: center;
+        width: 100%;
+        height: 100vh;
+        background: #fff;
+        transition: 0.5s;
+        z-index: 999;
+        border-top: 1px solid rgba(0,0,0,0.2);
+    }
+    .navbar-section nav ul.active
+    {
+        left: 0;
+    }
+    .navbar-section nav ul li
+    {
+        margin: 40px 0;
+    }
+    .navbar-section nav ul li a
+    {
+        color: #000;
+    }
+    .toggle
+    {
+        width: 40px;
+        height: 40px;
+        background: url('../img/menu.png');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 30px;
+        cursor: pointer;
+    }
+    .toggle.active
+    {
+        background: url('../img/close.png');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 25px;
+        cursor: pointer;
+    }
+    .slider-section
+    {
+        width: 100%;
+        height: 400px;
+    }
+    .slider-section .carousel-caption
+    {
+        position: absolute !important;
+        top: 60px !important;
+        left: 120px !important;
+    }
+    .slider-section .carousel-caption h3
+    {
+        font-size: 2.2em !important;
+    }
+    .slider-section .carousel-caption p
+    {
+        font-size: 15px !important;
+    }
+    .slider-section .carousel-caption button
+    {
+        font-size: 15px !important;
+        padding: 10px 15px !important;
+    }
+    .donate-section
+    {
+        width: 100%;
+    }
+    .heading h2
+    {
+        font-size: 2.2em;
+        margin: 0;
+    }
+    .heading p
+    {
+        font-size: 1em;
+    }
+    .donate-section .donate-box
+    {
+        width: 100%;
+        margin: auto;
+        padding: 0 20px;
+        grid-column-gap: 20px;
+    }
+    .donate-section .donate-box button
+    {
+        font-size: 1em;
+        height: 100px;
+        width: 100px;
+    }
+    .donate-section .donate-input input[type="number"]
+    {
+        font-size: 18px;
+    }
+    .donate-section .donate-input button
+    {
+        font-size: 1em;
+        padding: 10px 15px;
+    }
+    .donate-plan-section
+    {
+        width: 100%;
+    }
+    .donate-plan-section .my-card-box
+    {
+        display: grid;
+        grid-template-columns: repeat(1, 3fr);
+        grid-row-gap: 40px;
+    }
+    .life-depends,
+    .need-section
+    {
+        display: grid;
+        grid-row-gap: 40px;
+        width: 100%;
+    }
+    .text-area h1
+    {
+        font-size: 2em !important;
+    } 
+    .text-area p
+    {
+        font-size: 1em !important;
+    }
+    .text-area button
+    {
+        font-size: 1em !important;
+        padding: 10px 15px !important;
+    }
+    .update-section
+    {
+        width: 100% !important;
+
+    }
+    .update-section .email-box
+    {
+        width: 90%;
+    }
+    footer h3
+    {
+        margin-bottom: 5px;
+        margin-top: 0;
+    }
+}
+
+@media (max-width: 630px)
+{
+    .navbar-section nav .logo h3
+    {
+        font-size: 20px;
+    }
+    .heading h2
+    {
+        font-size: 25px;
+    }
+    .heading p
+    {
+        font-size: 15px;
+    }
+    .donate-section .donate-box
+    {
+        display: grid;
+        grid-template-columns: repeat(3, 2fr);
+        grid-gap:
+    }
+    .donate-section .donate-input input[type="number"]
+    {
+        width: 90%;
+    }
+    .life-depends .text-area,
+    .need-section .text-area
+    {
+        width: 100%;
+        padding: 10px 0;
+        margin: auto;
+    }
+}
+
+@media (max-width: 400px)
+{
+    .navbar-section nav
+    {
+        width: 100%;
+        margin: 0 10px;
+    }
+    .navbar-section nav .logo h3
+    {
+        font-size: 15px;
+    }
+    .slider-section
+    {
+        height: 300px;
+    }
+    .slider-section .carousel-caption
+    {
+        top: 50px !important;
+        left: 50px !important;
+    }
+    .slider-section .carousel-caption h3
+    {
+        font-size: 1.3em !important;
+    }
+    .slider-section .carousel-caption p
+    {
+        font-size: 13px !important;
+    }
+    .slider-section .carousel-caption button
+    {
+        font-size: 13px !important;
+        padding: 7px 10px !important;
+    }
+    .donate-section
+    {
+        padding: 10px;
+        margin: auto;
+    }
+    .donate-section .heading,
+    .donate-plan-section .heading,
+    .update-section .heading
+    {
+        margin: 0;
+        margin-bottom: 10px;
+    }
+    .donate-section .donate-box
+    {
+        grid-template-columns: repeat(2, 2fr);
+        grid-row-gap: 0 !important;
+        grid-column-gap: 0 !important;
+    }
+    .heading h2
+    {
+       font-size: 20px !important;
+    }
+    .heading p
+    {
+        font-size: 14px;
+    }
+    .donate-plan-section .my-card
+    {
+        width: 350px !important;
+    }
+    .donate-plan-section .my-card .my-card-box i
+    {
+        font-size: 1em;
+    }
+    .life-depends .picture-area,
+    .need-section .picture-area
+    {
+        width: 100%;
+        padding: 10px;
+        margin: auto;
+    }
+    .life-depends .text-area h1,
+    .need-section .text-area h1
+    {
+        font-size: 22px !important;
+    }
+    .life-depends .text-area p,
+    .need-section .text-area p
+    {
+        font-size: 14px !important;
+    }
+    .update-section .email-box
+    {
+        width: 100%;
+    }
+    .update-section .email-box input[type="email"]
+    {
+        padding: 5px 10px;
+        font-size: 0.9em;
+    }
+    .update-section .email-box button
+    {
+        padding: 5px 10px;
+        font-size: 0.9em;
+    }
 }

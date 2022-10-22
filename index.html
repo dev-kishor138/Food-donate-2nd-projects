@@ -5,7 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Donate People || Second projects</title>
-    <!-- <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'> -->
+
+    <!-- FontAwesome Icon -->
+    <script src="https://kit.fontawesome.com/380956b451.js" crossorigin="anonymous"></script>
 
     <!--Bootstrap Cdn-->
     <link rel="stylesheet" href="boostrap/css/bootstrap.min.css">
@@ -22,6 +24,7 @@
       <div class="logo">
         <h3>Donate Food</h3>
       </div>
+      <div class="toggle" onclick="toggleMenu()"></div>
       <ul>
         <li><a href="#">Home</a></li>
         <li><a href="#">Home</a></li>
@@ -45,7 +48,7 @@
           <div class="carousel-item active" data-bs-interval="10000">
             <div class="background-overlay"></div>
             <img src="img/slide-2.jpg" class="d-block w-100" alt="...">
-            <div class="carousel-caption d-none d-md-block">
+            <div class="carousel-caption d-md-block">
               <h3>First slide label</h3>
               <p>Some representative placeholder content for the first slide.</p>
               <button>Donate Now</button>
@@ -54,7 +57,7 @@
           <div class="carousel-item" data-bs-interval="2000">
             <div class="background-overlay"></div>
             <img src="img/slide-3.jpg" class="d-block w-100" alt="...">
-            <div class="carousel-caption d-none d-md-block">
+            <div class="carousel-caption d-md-block">
               <h3>Second slide label</h3>
               <p>Some representative placeholder content for the second slide.</p>
               <button>Donate Now</button>
@@ -63,7 +66,7 @@
           <div class="carousel-item">
             <div class="background-overlay"></div>
             <img src="img/slide-1.jpg" class="d-block w-100" alt="...">
-            <div class="carousel-caption d-none d-md-block">
+            <div class="carousel-caption d-md-block">
               <h3>Third slide label</h3>
               <p>Some representative placeholder content for the third slide.</p>
               <button>Donate Now</button>
@@ -90,15 +93,15 @@
       <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum, esse.</p>
     </div>
     <div class="donate-box">
-      <div class="box"><h3>100Tk</h3></div>
-      <div id="active" class="box"><h3>200Tk</h3></div>
-      <div class="box"><h3>500Tk</h3></div>
-      <div class="box"><h3>1000Tk</h3></div>
-      <div class="box"><h3>5000Tk</h3></div>
+      <button class="amount-button"><span class="donation-amount">100</span>Tk</button>
+      <button class="amount-button"><span class="donation-amount">200</span>Tk</button>
+      <button class="amount-button"><span class="donation-amount">500</span>Tk</button>
+      <button class="amount-button"><span class="donation-amount">1000</span>Tk</button>
+      <button class="amount-button"><span class="donation-amount">5000</span>Tk</button>
     </div>
     <div class="donate-input">
-      <input type="number" placeholder="Enter your Amount">
-      <button>Donate now</button>
+      <input id="input-value" type="number" placeholder="Enter your Amount">
+      <button id="donate-button">Donate now</button>
     </div>
    </section>
 
@@ -110,23 +113,17 @@
     </div>
     <div class="my-card-box">
       <div class="my-card">
-        <div class="img-box">
-          <img class="card-img" src="https://img.icons8.com/material/96/000000/rice-bowl--v1.png">
-        </div>
+        <i class="fa-solid fa-bowl-food"></i>
         <h4>Food For Family</h4>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, tenetur distinctio? Dicta perspiciatis eveniet voluptatem voluptatibus autem quidem accusamus dolorum!</p>
       </div>
       <div class="my-card">
-        <div class="img-box">
-          <img class="card-img" src="https://img.icons8.com/material/96/000000/family--v1.png">
-        </div>
+        <i class="fa-solid fa-person"></i>
         <h4>Food For Family</h4>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, tenetur distinctio? Dicta perspiciatis eveniet voluptatem voluptatibus autem quidem accusamus dolorum!</p>
       </div>
       <div class="my-card">
-        <div class="img-box">
-          <img class="card-img" src="https://img.icons8.com/ios/50/000000/knowledge-sharing.png"/>
-        </div>
+        <i class="fa-solid fa-book-open-reader"></i>
         <h4>Food For Family</h4>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, tenetur distinctio? Dicta perspiciatis eveniet voluptatem voluptatibus autem quidem accusamus dolorum!</p>
       </div>
@@ -177,7 +174,19 @@
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, eum.</p>
    </footer>
 
+   <div id="pop-message" class="popup-box">
+    <i class="fa-solid fa-handshake"></i>
+    <h4>Thanks For your Donation</h4>
+    <button id="ok-button">Ok</button>
+   </div>
 
+
+   <script>
+    
+   </script>
+
+   <!-- Custom Js -->
+   <script src="js/script.js"></script>
    <!-- Bootstrap cdn link-->
     <script src="boostrap/js/bootstrap.min.js"></script>
 </body>
